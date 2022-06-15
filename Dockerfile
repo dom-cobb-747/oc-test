@@ -17,22 +17,28 @@ COPY --chown=aceuser:aceuser libs/apm-agent-attach-1.17.0-sources.jar /home/aceu
 COPY --chown=aceuser:aceuser libs/elastic-apm-agent-1.17.0-sources.jar /home/aceuser/ace-server/shared-classes/
 
 #PERMISO jplugin
-RUN chmod 755 /opt/ibm/ace-12/server/jplugin/Log4jLoggingNode_v1.2.4.jar &&  chmod 755 /opt/ibm/ace-12/server/jplugin/apm-agent-api-1.17.0.jar
-RUN chmod 755 /opt/ibm/ace-12/server/jplugin/apm-agent-attach-1.7.0.jar
+RUN chmod 755 /opt/ibm/ace-12/server/jplugin/Log4jLoggingNode_v1.2.4.jar \
+    &&  chmod 755 /opt/ibm/ace-12/server/jplugin/apm-agent-api-1.17.0.jar \
+    && chmod 755 /opt/ibm/ace-12/server/jplugin/apm-agent-attach-1.7.0.jar
 
 #PERMISO shared-classes
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/Log4jLoggingNode_v1.2.4.jar && chmod 755 /home/aceuser/ace-server/shared-classes/jakarta-oro-2.0.4.jar
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/log4j-1.2.8.jar && chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-api-1.17.0.jar
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-attach-1.7.0.jar && chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-attach-1.17.0-sources.jar
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/elastic-apm-agent-1.17.0-sources.jar
+RUN chmod 755 /home/aceuser/ace-server/shared-classes/Log4jLoggingNode_v1.2.4.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/jakarta-oro-2.0.4.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/log4j-1.2.8.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-api-1.17.0.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-attach-1.7.0.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/apm-agent-attach-1.17.0-sources.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/elastic-apm-agent-1.17.0-sources.jar
 
 #BASE DE DATOS 
 COPY --chown=aceuser:aceuser libs/jt400.jar /home/aceuser/ace-server/shared-classes/
 COPY --chown=aceuser:aceuser libs/nzjdbc-1.0.jar /home/aceuser/ace-server/shared-classes/
 COPY --chown=aceuser:aceuser libs/ojdbc8.jar /home/aceuser/ace-server/shared-classes/
 COPY --chown=aceuser:aceuser libs/sqljdbc42.jar /home/aceuser/ace-server/shared-classes/
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/jt400.jar && chmod 755 /home/aceuser/ace-server/shared-classes/nzjdbc-1.0.jar
-RUN chmod 755 /home/aceuser/ace-server/shared-classes/ojdbc8.jar && chmod 755 /home/aceuser/ace-server/shared-classes/sqljdbc42.jar
+RUN chmod 755 /home/aceuser/ace-server/shared-classes/jt400.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/nzjdbc-1.0.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/ojdbc8.jar \
+    && chmod 755 /home/aceuser/ace-server/shared-classes/sqljdbc42.jar
 
 #APIDB
 COPY --chown=aceuser:aceuser bars/APIDB_DB2_PROCEDURE.bar /home/aceuser/initial-config/bars/
@@ -61,7 +67,9 @@ COPY --chown=aceuser:aceuser config/confLogApiDB.xml /var/mqsi/config/
 
 USER root
 #RUTA GUARDAR LOGS
-RUN mkdir -p /apps/logs && chmod +x /apps/logs*
-RUN chmod 777 /apps/logs* && chown aceuser:aceuser /apps/logs
+RUN mkdir -p /apps/logs \
+    && chmod +x /apps/logs* \
+    && chmod 777 /apps/logs* \
+    && chown aceuser:aceuser /apps/logs
 
 USER aceuser
