@@ -1,4 +1,4 @@
-FROM cp.icr.io/cp/appc/ace-server-prod:12.0.4.0-r1@sha256:2b8be27ffa0106c66d7bab819a8043bb7e01a7d049ede0df8439f9d42d799685
+FROM default-route-openshift-image-registry.apps.ocp-integra-desarrollo.ocp.sura.net.pe/ace-apidb-dev/ace-server:12.0.4.0-r1-amd64
 # PLUGIN LOG
 RUN mkdir /home/aceuser/ace-server/shared-classes
 RUN mkdir /home/aceuser/ace-server/properties
