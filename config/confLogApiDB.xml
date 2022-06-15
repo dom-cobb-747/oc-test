@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+        
+  
+	
+	<appender name="LOGPROCEDURE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value='{"log.level":"%p","@timestamp":"%d{ISO8601}","transaction.id":"%t", "debug_line":"%L","message":"%m"}%n' />
+		</layout>
+	</appender>
+	
+
+    <appender name="LOGQUERY" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value='{"log.level":"%p","@timestamp":"%d{ISO8601}","transaction.id":"%t", "debug_line":"%L","message":"%m"}%n' />
+		</layout>
+	</appender>
+   
+
+
+   <category name="org.apache.log4j.xml">
+    <priority value="DEBUG" />
+  </category>
+
+
+  <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="LOGPROCEDURE"/>
+    </root>
+
+</log4j:configuration>
