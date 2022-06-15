@@ -1,13 +1,13 @@
 apiVersion: appconnect.ibm.com/v1beta1
 kind: IntegrationServer
 metadata:
-  name: dummy-ace-server-01
+  name: dummy-prueba-ace-01
   namespace: ace-apidb-dev
 spec:
   pod:
     containers:
       runtime:
-        image: image-registry.openshift-image-registry.svc:5000/ace-apidb-dev/dummy-ace-apidb-v2
+        image: image-registry.openshift-image-registry.svc:5000/ace-apidb-dev/dummy-prueba-ace
   configurations: []
   designerFlowsOperationMode: disabled
   license:
