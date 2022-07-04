@@ -42,7 +42,7 @@ RUN chmod 755 /home/aceuser/ace-server/shared-classes/jt400.jar \
 
 #APIDB
 COPY --chown=aceuser:aceuser bars/APIDB_DB2_PROCEDURE.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_DB2_QUERY.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_DB2_QUERY.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_PROCEDURE.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_QUERY.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_PROCEDURE.bar /home/aceuser/initial-config/bars/
