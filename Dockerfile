@@ -46,9 +46,9 @@ COPY --chown=aceuser:aceuser bars/APIDB_DB2_QUERY.bar /home/aceuser/initial-conf
 COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_PROCEDURE.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_QUERY.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_PROCEDURE.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_QUERY.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_PROCEDURE.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_QUERY.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_QUERY.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_PROCEDURE.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_QUERY.bar /home/aceuser/initial-config/bars/
 
 #APIDBv2
 #COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_PROCEDURE_V2.bar /home/aceuser/initial-config/bars/
@@ -56,11 +56,11 @@ COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_PROCEDURE.bar /home/aceuser/initi
 COPY --chown=aceuser:aceuser properties/apidb.properties /home/aceuser/ace-server/properties
 
 #DATAQUEUE
-#COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
 
 #CONFIG LOG
 COPY --chown=aceuser:aceuser config/confLogApiDB.xml /var/mqsi/config/
