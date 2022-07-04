@@ -58,7 +58,7 @@ COPY --chown=aceuser:aceuser properties/apidb.properties /home/aceuser/ace-serve
 #DATAQUEUE
 #COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
 #COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
 
