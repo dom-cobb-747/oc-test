@@ -59,8 +59,8 @@ COPY --chown=aceuser:aceuser properties/apidb.properties /home/aceuser/ace-serve
 #COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
-COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
-#COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
+#COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_TRANSIENT.bar /home/aceuser/initial-config/bars/
+COPY --chown=aceuser:aceuser bars/APIDB_CALL_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/aceuser/initial-config/bars/
 
 #CONFIG LOG
 COPY --chown=aceuser:aceuser config/confLogApiDB.xml /var/mqsi/config/
