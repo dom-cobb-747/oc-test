@@ -46,7 +46,7 @@ COPY --chown=aceuser:aceuser bars/APIDB_DB2_QUERY.bar /home/aceuser/initial-conf
 COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_PROCEDURE.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_NETEZZA_QUERY.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_PROCEDURE.bar /home/aceuser/initial-config/bars/
-COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_QUERY.bar /home/aceuser/initial-config/bars/
+#COPY --chown=aceuser:aceuser bars/APIDB_ORACLE_QUERY.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_PROCEDURE.bar /home/aceuser/initial-config/bars/
 COPY --chown=aceuser:aceuser bars/APIDB_SQLSERVER_QUERY.bar /home/aceuser/initial-config/bars/
 
