@@ -66,7 +66,7 @@ COPY --chown=aceuser:aceuser bars/APIDB_DATAQUEUE_ERROR_NO_TRANSIENT.bar /home/a
 COPY --chown=aceuser:aceuser config/confLogApiDB.xml /var/mqsi/config/
 
 #CERTIFICATE
-COPY ssl/ace.console-dev.desa.ocp.sura.pe.p12 /home/aceuser/ssl/
+#COPY ssl/ace.console-dev.desa.ocp.sura.pe.p12 /home/aceuser/ssl/
 
 USER root
 #RUTA GUARDAR LOGS
